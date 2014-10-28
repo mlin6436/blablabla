@@ -4,6 +4,7 @@
   "description": "bla bla bla",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js"
   },
   "author": "mlin6436",
   "license": "ISC",
