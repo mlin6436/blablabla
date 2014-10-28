@@ -1,0 +1,12 @@
+{
+  "name": "talkie",
+  "version": "1.0.0",
+  "authors": [
+    "mlin6436 <mlin6436@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "index.ejs",
+  "dependencies": {
+    "bootstrap.css": "~2.3.2"
+  }
+}
