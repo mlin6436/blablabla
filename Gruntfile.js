@@ -1,6 +1,6 @@
 'use strict';
 
-var RUNNING_PORT = 8080;
+var RUNNING_PORT = 80;
 
 module.exports = function (grunt) {
   // load all grunt tasks
@@ -168,7 +168,7 @@ module.exports = function (grunt) {
 
     open: {
       server: {
-        path: 'http://localhost:' + RUNNING_PORT
+        path: 'http://blablabla-mlin6436.rhcloud.com' + RUNNING_PORT
       }
     }
 

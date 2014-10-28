@@ -1,5 +1,5 @@
 
-var socket = io.connect('http://127.0.0.1:8080/');
+var socket = io.connect('http://blablabla-mlin6436.rhcloud.com:80/');
 
 $(function(){
 	var $notificationscreen = $('#notification-screen');
