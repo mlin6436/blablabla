@@ -1,9 +1,11 @@
 var express = require('express');
 var app = express();
 var server = require('http').createServer(app);
-var port = process.env.PORT;
 var io = require('socket.io').listen(server);
 var device  = require('express-device');
+
+var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 var users = ['123'];
 
 // configuration
@@ -51,4 +53,6 @@ io.sockets.on('connection', function (socket) {
 });
 
 // server
-server.listen(8080);
+server.listen(server_port, server_ip_address, function () {
+  console.log("Listening on " + server_ip_address + ", server_port " + server_port);
+});

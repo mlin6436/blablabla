@@ -1,6 +1,7 @@
 'use strict';
 
-var RUNNING_PORT = 8080;
+var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 
 module.exports = function (grunt) {
   // load all grunt tasks
@@ -132,7 +133,7 @@ module.exports = function (grunt) {
           //delayTime: 1,
           legacyWatch: true,
           env: {
-            PORT: RUNNING_PORT
+            PORT: server_port
           },
           cwd: __dirname
         }
@@ -168,7 +169,7 @@ module.exports = function (grunt) {
 
     open: {
       server: {
-        path: 'http://localhost:' + RUNNING_PORT
+        path: 'http://' + server_ip_address + ':' + server_port
       }
     }
 
