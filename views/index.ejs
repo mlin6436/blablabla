@@ -8,6 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/core.css">
     <style>
+      body {
+        padding: 10px 0;
+      }
       input:focus,
 			select:focus,
 			textarea:focus,
@@ -24,8 +27,9 @@
 			    overflow: scroll;
 			}
 			p {
-		    	margin:0;
+		    	margin:0 0 10px 0;
 		    	padding:0;
+          font-size: 12pt;
       }
 		</style>
     </head>
@@ -38,36 +42,35 @@
       </div>
 
       <div id="user-screen" class="container" style="display: none;">
-        <p>Welcome: <div id="user" style="color: red;"></div></p>
+        <div>Welcome: <div id="user" style="color: red;"></div></div>
       </div>
 
       <div id="login-screen" class="container">
-        <p>Please enter your user name to join the chat</p>
-        <form id="login-form" class="form-inline">
-          <div class="form-group">
-            <input id="username" class="form-control input-lg" type="text" placeholder="Your user name">
-          </div>
-          <button id="join" class="btn btn-primary btn-lg" type="button">Join</button>
-        </form>
+        <div class="jumbotron">
+          <h1>Bla Bla Bla</h1>
+          <p>Start your chat by giving your preferred username: </p>
+          <form id="login-form" class="form-inline">
+            <div class="form-group" style="margin: 0 0 10px 0;">
+              <input id="username" class="form-control input-lg" type="text" placeholder="Your user name">
+              <button id="join" class="btn btn-primary btn-lg" type="button">Join</button>
+            </div>
+          </form>
+        </div>
       </div>
 
       <div id="chat-screen" class="container" style="display: none;">
         <div class="jumbotron">
           <h1>Bla Bla Bla</h1>
-          <div class="row">
             <div class="col-md-4 col-sm-6 col-xs-6">
-              <h3>
-                <button id="clear" class="btn btn-danger btn-xs pull-right" type="button">clear</button>
-              </h3>
-              <div id="chatboard" class="form-control"></div>
+              <div id="chatboard" class="form-control" style="margin: 0 0 10px 0; padding: 10px; height: 200px;"></div>
+              <button id="clear" class="btn btn-danger btn-xs pull-right" type="button">Clear</button>
               <div class="input-group">
                 <input id="message" type="text" class="form-control" placeholder="send something to everyone">
                 <span class="input-group-btn">
-                  <button id="send" class="btn btn-success" type="button">Send</button>
+                  <button id="send" class="btn btn-success" type="button" style="margin-bottom: 10px;">Send</button>
                 </span>
               </div>
            	</div>
-           </div>
     		</div>
     	</div>
 
